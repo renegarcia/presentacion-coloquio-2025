@@ -19,7 +19,7 @@ jobs:
 
       - name: Compile LaTeX document
         run: |
-          latexmk handouts/presentacion-coloquio-2025-isra.tex
+          cd handouts; latexmk presentacion-coloquio-2025-isra.tex
 
       - name: Release
         uses: softprops/action-gh-release@v2
