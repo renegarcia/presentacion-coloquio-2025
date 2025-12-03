@@ -6,32 +6,33 @@
 %\setbeamertemplate{blocks}[rounded][shadow]
 
 \title{Crecimiento de bolas geodésicas en grupos de Heintze diagonales}
+\date{16 de diciembre de 2025}
 \author{Israel García}
 \begin{document}
 \begin{frame}[plain]
-    \maketitle
+	\maketitle
 \end{frame}
 \begin{frame}
-    \frametitle{Preliminares}
-    \begin{itemize}
-    	\item Sea $M$ una variedad Riemanniana \em{conexa, homogénea, de curvatura negativa}, entonces $M$ es \em{simplemente conexa} por un resultado de Kobayashi. 
-    	\item Heintze prueba la isometría $M \cong N \rtimes_{\alpha} \mathbb{R}^{+}$, donde $N$ es un grupo de Lie simplemente conexo, nilpotente con álgebra de Lie $\mathfrak{n}$ tal que a nivel de álgebras, el $1 \in \mathfrak{n}$ actúa por medio de una derivación $\alpha: \mathfrak{n} \to \mathfrak{n}$ con valores propios positivos.
-    	\item Si $\alpha$ tiene valores propios positivos y negativos, $N \rtimes_{\alpha} \mathbb{R}^{+}$ es isométrico al \alert{\emph{producto horocíclico}} de dos espacios de Heintze como los anteriores.
-    \end{itemize}
+	\frametitle{Preliminares}
+	\begin{itemize}
+		\item Sea $M$ una variedad Riemanniana \em{conexa, homogénea, de curvatura negativa}, entonces $M$ es \em{simplemente conexa} por un resultado de Kobayashi.
+		\item Heintze prueba la isometría $M \cong N \rtimes_{\alpha} \mathbb{R}^{+}$, donde $N$ es un grupo de Lie simplemente conexo, nilpotente con álgebra de Lie $\mathfrak{n}$ tal que a nivel de álgebras, el $1 \in \mathfrak{n}$ actúa por medio de una derivación $\alpha: \mathfrak{n} \to \mathfrak{n}$ con valores propios positivos.
+		\item Si $\alpha$ tiene valores propios positivos y negativos, $N \rtimes_{\alpha} \mathbb{R}^{+}$ es isométrico al \alert{\emph{producto horocíclico}} de dos espacios de Heintze como los anteriores.
+	\end{itemize}
 \end{frame}
 \begin{frame}
 	\frametitle{Preliminares (cont.)}
 	\begin{itemize}
 		\item Si $N$ es abeliano, se puede demostrar que el mapeo exponencial $Exp: \mathfrak{n} \rtimes_{\alpha} \mathbb{R} \to N \rtimes_{\alpha} \mathbb{R}^{+}$ es un difeomorismo.
 		\item $Exp$ se convierte en un isomorfismos de grupos de Lie definiendo el siguiente producto en $\mathfrak{n} \rtimes_{\alpha} \mathbb{R}$:
-		$$
-		(n_{1}, t_{1}) * (n_{2}, t_{2}) := (n_{1} + e^{t_{1}\alpha} n_{2}, t_{1} + t_{2}),
-		$$
-		donde $e^{t_{1}\alpha}: \mathfrak{n} \to \mathfrak{n}$ es el mapeo exponencial del operador $t_{1}\alpha$.
+		      $$
+			      (n_{1}, t_{1}) * (n_{2}, t_{2}) := (n_{1} + e^{t_{1}\alpha} n_{2}, t_{1} + t_{2}),
+		      $$
+		      donde $e^{t_{1}\alpha}: \mathfrak{n} \to \mathfrak{n}$ es el mapeo exponencial del operador $t_{1}\alpha$.
 		\item Sean $\{E_{1}, \ldots, E_{n}\}$ una base ortonormal de $N$ en la que $\alpha$ se representa como la matriz $A \in \mathbb{R}^{n \times n}$ y $E_{n+1} := \partial_{t}$. La métrica del grupo en esta base es,
-		$$
-		g_{A} = |e^{-tA}dx|^2 + dt^2.
-		$$
+		      $$
+			      g_{A} = |e^{-tA}dx|^2 + dt^2.
+		      $$
 	\end{itemize}
 \end{frame}
 \begin{frame}
@@ -43,27 +44,27 @@
 		\item Es natural preguntar ¿cuál es la clasificación en clases de isometría de todos los espacios $N \rtimes_{\alpha} \mathbb{R}^{+}$ con $(N, \alpha)$ arbitrarios?
 		\item En lo que queda de la plática hablaremos del caso $N$ abeliano y $\alpha$ diagonalizable en $\mathbb{C}$.
 	\end{itemize}
-	
+
 \end{frame}
 \begin{frame}[shrink=10]
 	\frametitle{Ejemplo: El espacio hiperbólico}
 	\begin{tabular}{cc}
-	\includegraphics[width=0.4\linewidth]{poincare-disk} &
-	\includegraphics[width=0.4\linewidth]{half-plane-model}\\
-	Modelo de Poincaré &
-	Modelo del semiplano
+		\includegraphics[width=0.4\linewidth]{poincare-disk} &
+		\includegraphics[width=0.4\linewidth]{half-plane-model} \\
+		Modelo de Poincaré                                   &
+		Modelo del semiplano
 	\end{tabular}
 	\vskip 1em
-	La métrica en el modelo del semiplano con curvatura $-k^2$ es 
+	La métrica en el modelo del semiplano con curvatura $-k^2$ es
 	$$
-	ds^2 = \frac{dx^2 + dy^2}{k^2 y^2}.
+		ds^2 = \frac{dx^2 + dy^2}{k^2 y^2}.
 	$$
 \end{frame}
 \begin{frame}
 	{El modelo logarítmico}
 	Si $y = e^{kt}/k$, $k > 0$, el cambio de variable $(x,t) \mapsto (x, y)$ transforma el modelo del semiplano con curvatura $-k^2$,  $\mathbb{H}^2(-k^2)$, en el \alert{modelo logarítmico:} $\mathbb{R}^2$ con la métrica
 	$$
-	ds^2_{log} = e^{-2kt} dx^2 + dt^2.
+		ds^2_{log} = e^{-2kt} dx^2 + dt^2.
 	$$
 	Por lo tanto, $\mathbb{H}^2(-k^2)$ es isométrico al grupo de Heintze $\mathbb{R} \rtimes_{(k)} \mathbb{R}$.
 	\begin{block}
@@ -83,38 +84,38 @@
 		\item $\gamma$ determina un \alert{horociclo} $H$ que pasa por $o$ e $\infty$.
 		\item $H$ y $\gamma$ inducen coordenadas horocíclicas $(x, t)$ en $D_{1}$ y $D_{2}$.
 		\item Identifica $(x_{1}, t_{1}) \in D_{1}$  con $(x_{2}, t_{2}) \in D_{2}$ sii $x_{1} = x_{2}$ y $t_{1} + t_{2} = 0$. Definimos el \alert{producto horocíclico}:
-		$$
-		D_{1} \bowtie D_{2} := D_{1} \times D_{2} / \sim.
-		$$
+		      $$
+			      D_{1} \bowtie D_{2} := D_{1} \times D_{2} / \sim.
+		      $$
 	\end{itemize}
 \end{frame}
 \begin{frame}
 	{Productos horocíclicos}
 	\begin{itemize}
-	\item Se puede demostrar que $\mathbb{H}^2 \bowtie \mathbb{H}^2 \cong \mathbb{R}^2 \rtimes_{\left(\begin{smallmatrix}
-			1 & 0 \\
-			0 & -1
-		\end{smallmatrix}\right)}\mathbb{R}$.
-	\item El grupo anterior es SOL, conocido por representar una de las 8 geometrías de Thurston.
-	\item En general, si $H_{i} = \mathbb{R}^{n_{i}} \rtimes_{A_{i}} \mathbb{R} $, $i = 1, 2$, son dos grupos de Heintze abelianos, 
-	$$
-		H_{1} \bowtie H_{2} \cong \mathbb{R}^{n_{1} + n_{2}} \rtimes_{\left(\begin{smallmatrix}
-				A_{1} & \\
-				& -A_{2}
-		\end{smallmatrix}\right)} \mathbb{R}.
-	$$	 
+		\item Se puede demostrar que $\mathbb{H}^2 \bowtie \mathbb{H}^2 \cong \mathbb{R}^2 \rtimes_{\left(\begin{smallmatrix}
+					      1 & 0 \\
+					      0 & -1
+				      \end{smallmatrix}\right)}\mathbb{R}$.
+		\item El grupo anterior es SOL, conocido por representar una de las 8 geometrías de Thurston.
+		\item En general, si $H_{i} = \mathbb{R}^{n_{i}} \rtimes_{A_{i}} \mathbb{R} $, $i = 1, 2$, son dos grupos de Heintze abelianos,
+		      $$
+			      H_{1} \bowtie H_{2} \cong \mathbb{R}^{n_{1} + n_{2}} \rtimes_{\left(\begin{smallmatrix}
+					      A_{1} & \\
+					      & -A_{2}
+				      \end{smallmatrix}\right)} \mathbb{R}.
+		      $$
 	\end{itemize}
 \end{frame}
 \section{La geometría de los grupos de Heintze}
 \begin{frame}
 	{Grupos abelianos diagonales}
 	Recordemos que una matriz $A \in \mathbb{R}^{n\times n}$ es normal si cumple que $A^T A = A A^T$ y que $A$ es $\mathbb{C}$-diagonalizable por matrices \alert{unitarias} si y solo si es normal.
-	
+
 	\begin{block}
 		{Proposición}
 		Sea $A \in \mathbb{R}^{n \times n}$ una matriz normal con espectro $\{\lambda_{1}, \ldots, \lambda_{n}\} \subset \mathbb{C}$ y sea $D = diag(\Re(\lambda_{1}), \ldots, \Re(\lambda_{n}))$, entonces los espacios $\mathbb{R}^{n} \rtimes_{A} \mathbb{R}$ y $\mathbb{R}^{n} \rtimes_{D} \mathbb{R}$ son isométricos.
 	\end{block}
-	
+
 \end{frame}
 \begin{frame}
 	{Conexión para grupos diagonales}
@@ -122,13 +123,13 @@
 		{Proposición}
 		Sean $A = diag(a_{1}, \ldots, a_{n})$ una matriz diagonal, con entradas de cualquier signo y $\{E_{1}, \ldots, E_{n}\}$ una base ortonormal de $\mathbb{R}^{n}$. Denotemos por $\Pi$ el hiperplano generado por esta base en el producto semidirecto $\mathbb{R}^{n} \rtimes_{A} \mathbb{R}$ y por $E_{n+1}$ un vector unitario ortogonal a $\Pi$. Para $X, Y \in \Pi$ se verifican las siguientes identidades
 		\begin{align}
-			\nabla_{X}Y = \langle X, AY \rangle E_{n+1}, &&
-			\nabla_{X} E_{n+1} = -AX, 
+			\nabla_{X}Y = \langle X, AY \rangle E_{n+1}, &  &
+			\nabla_{X} E_{n+1} = -AX,
 		\end{align}
 	\end{block}
-	Para la siguiente proposición, recordemos que el tensor de curvatura está definido como 
+	Para la siguiente proposición, recordemos que el tensor de curvatura está definido como
 	$$
-	R(X, Y, Z, W) = \langle \nabla_{X} \nabla_{Y} Z - \nabla_{Y}\nabla_{X} Z - \nabla_{[X, Y]} Z, W \rangle,
+		R(X, Y, Z, W) = \langle \nabla_{X} \nabla_{Y} Z - \nabla_{Y}\nabla_{X} Z - \nabla_{[X, Y]} Z, W \rangle,
 	$$
 	$\forall X, Y, Z, W \in T(\mathbb{R}^{n} \rtimes_{A} \mathbb{R})$.
 \end{frame}
@@ -137,22 +138,22 @@
 		{Proposición}
 		Sea $A \in \mathbb{R}^{n\times n}$ una matriz diagonal, con $M$ el valor máximo de la diagonal principal y $m$ el valor mínimo. Sea $\kappa$ la curvatura seccional de cualquier 2-plano en $T(\mathbb{R}^{n} \rtimes_{A} \mathbb{R})$, Si $A$ o $-A$ es positiva definida, se cumple que,
 		$$
-		-M^2 \leq \kappa \leq -m^2.
+			-M^2 \leq \kappa \leq -m^2.
 		$$
 		En caso contrario,
 		$$
-		-\max(m^2, M^2) \leq \kappa \leq M |m|.
+			-\max(m^2, M^2) \leq \kappa \leq M |m|.
 		$$
 	\end{block}
 	\begin{itemize}
 		\item 	La proposición muestra que $\mathbb{R}^{n} \rtimes_{K I} \mathbb{R}$ tiene curvatura constante $-K^2$ y es por lo tanto isométrico a $\mathbb{H}^{n+1}(-K^2)$.
-		\item Sean $D$ y $S$ las partes simétrica y anti-simétrica de una matriz general $A$, se puede verificar que la curvatura es negativa si y solo sí $D$ y $D^2 -SD -DS $ son positivas definidas. 
+		\item Sean $D$ y $S$ las partes simétrica y anti-simétrica de una matriz general $A$, se puede verificar que la curvatura es negativa si y solo sí $D$ y $D^2 -SD -DS $ son positivas definidas.
 	\end{itemize}
 \end{frame}
 \begin{frame}
 	{Ecuaciones geodésicas}
 	\begin{itemize}
-		\item Para $A$ diagonal, $\mathbb{R}^{n} \rtimes_{A} \mathbb{R}$ tiene geometría hiperbólica si y solo si $A$ es positiva definida; en los demás casos, la geometría se parece a la de SOL. 
+		\item Para $A$ diagonal, $\mathbb{R}^{n} \rtimes_{A} \mathbb{R}$ tiene geometría hiperbólica si y solo si $A$ es positiva definida; en los demás casos, la geometría se parece a la de SOL.
 		\item Nos gustaría describir como crecen las bolas geodésicas en estos espacios.
 		\item Para ello, necesitamos aproximar el comportamiento límite de campos de Jacobi en el infinito.
 	\end{itemize}
@@ -161,26 +162,26 @@
 	{Ecuaciones geodésicas}
 	Sea $\xi = (\tilde{\xi}, \xi_{n+1}) \in T_{0}(\mathbb{R}^n \rtimes_{A} \mathbb{R})$ unitario, con $A$ diagonal. Sea $\gamma(t) = \exp_{0}(t\xi)$ la geodésica que parte del origen con velocidad $\xi$. Entonces $\gamma = (\tilde{\gamma}, \gamma_{n+1})$ es la única solución del ODE siguiente,
 	\begin{align}
-		\tilde{\gamma}' = e^{2A\gamma_{n+1}} \tilde{\xi}, && 
+		\tilde{\gamma}' = e^{2A\gamma_{n+1}} \tilde{\xi}, &  &
 		\gamma''_{n+1} = - \tilde{\xi}^{t} A e^{2A\gamma_{n+1}} \tilde{\xi}, \label{eq:geodesica}
 	\end{align}
 	con condiciones iniciales $\gamma(0) = \xi$. Además, la velocidad de la geodésica satisface la siguiente ecuación
 	$$
-	\tilde{\xi}^t e^{2A\gamma_{n+1}}\tilde{\xi} + {\gamma'}^2_{n+1} = 1.
+		\tilde{\xi}^t e^{2A\gamma_{n+1}}\tilde{\xi} + {\gamma'}^2_{n+1} = 1.
 	$$
 \end{frame}
 \begin{frame}
 	\begin{block}
 		{Lema}
-		Para toda geodésica de velocidad unitaria $\gamma$ que parte del origen con $\gamma_{n+1}'(0) \neq 1$, se cumple la aproximación 
+		Para toda geodésica de velocidad unitaria $\gamma$ que parte del origen con $\gamma_{n+1}'(0) \neq 1$, se cumple la aproximación
 		$$
-		\gamma_{n+1}(s) = -s(1 + o(1)).
+			\gamma_{n+1}(s) = -s(1 + o(1)).
 		$$
 	\end{block}
 	\begin{wrapfigure}
 		{r}{0.3\textwidth}
 		\centering
-		\includegraphics[width=.98\linewidth]{barrera-potencial}	
+		\includegraphics[width=.98\linewidth]{barrera-potencial}
 		\caption{Un potencial infinito}
 	\end{wrapfigure}
 	La ecuación~\eqref{eq:geodesica} para $\gamma_{n+1}$ es una ecuación autónoma que corresponde a una barrera de potencial infinita en el extremo $\gamma_{n+1} \to \infty$. De allí se puede probar analíticamente que $\gamma_{n+1}(s) \to -\infty$ cuando $s \to \infty$. De la ecuación de conservación de energía, $\gamma_{n+1}'(s) \to -1$ cuando $s \to \infty$. El resultado se sigue de la regla de l'Hôpital.
@@ -189,15 +190,15 @@
 	\vskip 2em
 	\begin{block}
 		{Lema}
-		Sean $\xi, \omega_{0} \in T_{0}(\mathbb{R}^n \rtimes_{A}\mathbb{R})$ unitarios y $A$ diagonal positiva con $\xi \perp \omega_{0}$. Sean $\gamma(s) = \exp_{0}(s\xi)$ y $\tau_{s,\xi}(\omega_{0})$ el transporte paralelo de $\omega_{0}$ a lo largo de $\gamma$ hasta $\gamma(s)$. Entonces 
+		Sean $\xi, \omega_{0} \in T_{0}(\mathbb{R}^n \rtimes_{A}\mathbb{R})$ unitarios y $A$ diagonal positiva con $\xi \perp \omega_{0}$. Sean $\gamma(s) = \exp_{0}(s\xi)$ y $\tau_{s,\xi}(\omega_{0})$ el transporte paralelo de $\omega_{0}$ a lo largo de $\gamma$ hasta $\gamma(s)$. Entonces
 		$$
-		\tau_{s,\xi}(\omega_{0}) = \omega_{\infty} (1 + O(e^{-sA})).
+			\tau_{s,\xi}(\omega_{0}) = \omega_{\infty} (1 + O(e^{-sA})).
 		$$
 	\end{block}
 	\begin{proof}
 		Sean $v(s)$ el vector de coordenadas de $\gamma(s)$ y $\omega(s)$ el vector de coordenadas de $\tau_{s,\xi}(\omega_{0})$ en un marco ortonormal izquierdo invariante de $T(\mathbb{R}^{n} \rtimes_{A} \mathbb{R})$. Se verifica la siguiente ecuación de transporte paralelo,
 		\begin{align}
-			\tilde{\omega}' = \omega_{n+1} A\tilde{v}, && 
+			\tilde{\omega}' = \omega_{n+1} A\tilde{v}, &  &
 			\omega'_{n+1} = -\tilde{v}^tA^t\tilde{\omega}. \label{eq:parallel-transport}
 		\end{align}
 		En este marco, $\tilde{v} = e^{A\gamma_{n+1}}\tilde{\xi}$. El estimado en $\gamma_{n+1}$ prueba que $\int_{0}^{\infty} |A\tilde{v}(s)| ds < \infty$ y que $\tilde{v}$ es uniformemente acotada. Viendo el lado derecho de~\eqref{eq:parallel-transport} como el residuo de la ecuación trivial $\omega' = 0$, el resultado se sigue de la teoría de estabilidad de Levinson.
@@ -205,46 +206,46 @@
 \end{frame}
 \begin{frame}[shrink=20]
 	{El volumen de bolas geodésicas}
-	Sean $V(r)$ el volumen de la bola $\mathbb{B}_{0}(r)$ y $S(r)$ el área de $\partial\mathbb{B}_{0}(r)$. Queremos estimar 
+	Sean $V(r)$ el volumen de la bola $\mathbb{B}_{0}(r)$ y $S(r)$ el área de $\partial\mathbb{B}_{0}(r)$. Queremos estimar
 	$$
-	V(r) = \int_{0}^r S(t) dt, \qquad \text{cuando } r \to \infty.
+		V(r) = \int_{0}^r S(t) dt, \qquad \text{cuando } r \to \infty.
 	$$
 	Sea $\mathcal{R}(s;\xi) = \tau^{-1}_{s;\xi}\circ R(\cdot,\gamma')\gamma' \circ \tau_{s;\xi}$. Si $\{w_{1}, \ldots, w_{n}\}$ es una base ortonormal de $\xi^{\perp}$, la restricción $\mathcal{R}|_{\xi^{\perp}}$ tiene matriz asociada $[\mathcal{R}]$ con entradas
 	$$
-	[\mathcal{R}]_{ij} = \langle 
+		[\mathcal{R}]_{ij} = \langle
 		\tau_{s;\xi}\omega_{i}, R(\tau_{s;\xi}\omega_{j}, \gamma')\gamma'
-	\rangle.
+		\rangle.
 	$$
 	Sea $\mathcal{A}(\cdot; \xi)$ la solución de la ecuación
 	$$
-	\mathcal{A}'' + [\mathcal{R}] A = 0,
+		\mathcal{A}'' + [\mathcal{R}] A = 0,
 	$$
-	con condiciones iniciales $\mathcal{A}(0) = 0$, $\mathcal{A}'(0) = I$. En un espacio de curvatura negativa, $\exp_{0}: T_{0}(\mathbb{R}^n \rtimes_{A} \mathbb{R}) \to \mathbb{R}^n \rtimes_{A} \mathbb{R}$ es un difeomorfismo. Un resultado clásico afirma que 
+	con condiciones iniciales $\mathcal{A}(0) = 0$, $\mathcal{A}'(0) = I$. En un espacio de curvatura negativa, $\exp_{0}: T_{0}(\mathbb{R}^n \rtimes_{A} \mathbb{R}) \to \mathbb{R}^n \rtimes_{A} \mathbb{R}$ es un difeomorfismo. Un resultado clásico afirma que
 	$$
-	S(r) = \int_{|\xi| = 1} \det \mathcal{A}(r; \xi) d\xi.
+		S(r) = \int_{|\xi| = 1} \det \mathcal{A}(r; \xi) d\xi.
 	$$
-	Nuestros estimados previos en el transporte paralelo permiten estudiar el comportamiento asintótico del área. 
+	Nuestros estimados previos en el transporte paralelo permiten estudiar el comportamiento asintótico del área.
 \end{frame}
 \begin{frame}
 	\begin{block}
 		{Lema}
-		Sean $\xi \in T_{0}(\mathbb{R}^n \rtimes_{A} \mathbb{R})$, con $A$ matriz diagonal positiva. Sea $\{\omega_{1}, \ldots, \omega_{n} \}$ una base ortonormal de $\xi^{\perp}$. Sea $\{E{1}, \ldots, E_{n}\}$ una base ortonormal, izquierdo invariante de $\mathbb{R}^{n}$ y sea $\omega_{i}^{\infty}$ el vector de coordenadas de la aproximación asintótica de $\tau_{s;\xi}\omega_{i}$ en esta base. Sea $\Omega = (\omega_{1}^{\infty}, \ldots, \omega_{n}^{\infty})$, 
-		existe una función matricial $M(s)$ absolutamente integrable y globalmente acotada, tal que 
+		Sean $\xi \in T_{0}(\mathbb{R}^n \rtimes_{A} \mathbb{R})$, con $A$ matriz diagonal positiva. Sea $\{\omega_{1}, \ldots, \omega_{n} \}$ una base ortonormal de $\xi^{\perp}$. Sea $\{E{1}, \ldots, E_{n}\}$ una base ortonormal, izquierdo invariante de $\mathbb{R}^{n}$ y sea $\omega_{i}^{\infty}$ el vector de coordenadas de la aproximación asintótica de $\tau_{s;\xi}\omega_{i}$ en esta base. Sea $\Omega = (\omega_{1}^{\infty}, \ldots, \omega_{n}^{\infty})$,
+		existe una función matricial $M(s)$ absolutamente integrable y globalmente acotada, tal que
 		$$
-		\mathcal{A}'' = \Omega^t A^2 \Omega \mathcal{A} - M\mathcal{A}.
+			\mathcal{A}'' = \Omega^t A^2 \Omega \mathcal{A} - M\mathcal{A}.
 		$$
 	\end{block}
 	La prueba del lema es un cálculo largo usando las identidades de conexión y las aproximaciones asintóticas del transporte paralelo.
 \end{frame}
 \begin{frame}
 	{}
-	Como corolario, obtenemos inmediatamente la aproximación 
+	Como corolario, obtenemos inmediatamente la aproximación
 	$$
-	\mathcal{A} = \Omega^t A^{-1} \sinh(sA)\Omega(I + o(1)),
+		\mathcal{A} = \Omega^t A^{-1} \sinh(sA)\Omega(I + o(1)),
 	$$
-	de donde  
+	de donde
 	$$
-	\det \mathcal{A} = \frac{e^{tr(A)s}}{2^{n} \det A} (1 + o(1)).
+		\det \mathcal{A} = \frac{e^{tr(A)s}}{2^{n} \det A} (1 + o(1)).
 	$$
 	Integrando esta ecuación, obtenemos inmediatamente aproximaciones para el área y el volumen en el caso diagonal.
 \end{frame}
@@ -253,7 +254,7 @@
 		{Teorema (--)}
 		Sea $G$ un grupo de Heintze abeliano con álgebra de Lie $\mathfrak{g}$ de dimensión $n + 1$. Sea $\mathfrak{g}' = [\mathfrak{g}, \mathfrak{g}]$ el álgebra derivada. Si  $\mathfrak{g}$ tiene un producto interno tal que para $\xi \in {(\mathfrak{g} ' )}^{\perp}$ unitario, la representación adjunta $A = ad_{\xi}|_{\mathfrak{g}'}$ es normal con valores propios de parte real positiva, entonces $G$ con la métrica izquierdo invariante inducida tiene curvatura negativa y el volumen de la bola geodésica $\mathbb{B}_{0}(r)$ tiene el siguiente comportamiento asintótico,
 		$$
-		Vol(\mathbb{B}_{0}(r)) = \frac{Vol(S^{n})}{2^n tr(A) \det (D)} e^{tr(A)r} (1 + o(1)),
+			Vol(\mathbb{B}_{0}(r)) = \frac{Vol(S^{n})}{2^n tr(A) \det (D)} e^{tr(A)r} (1 + o(1)),
 		$$
 		donde $D$ es la parte simétrica de $A$ y $S^{n}$ es la $n$-esfera canónica.
 	\end{block}
