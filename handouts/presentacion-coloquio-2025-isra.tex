@@ -1,19 +1,35 @@
 \documentclass{beamer}
-\usetheme{default}
+\usetheme{Copenhagen}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+
+\hypersetup{colorlinks=false,
+%allbordercolors={.5 .5 1},
+%pdfborderstyle={/S/U/W 1}
+}
+
 %\setbeamertemplate{blocks}[rounded][shadow]
 
-\title{Crecimiento de bolas geodésicas en grupos de Heintze diagonales}
+\title[Grupos de Heintze diagonales]{Crecimiento de bolas geodésicas en grupos de Heintze diagonales}
 \date{16 de diciembre de 2025}
 \author{Israel García}
+\institute{IMATE Cuernavaca \\ UNAM}
+
 \begin{document}
-\begin{frame}[plain]
-	\maketitle
-\end{frame}
+	
+\frame{\titlepage}
+
 \begin{frame}
-	\frametitle{Preliminares}
+	\frametitle{Contenido}
+	\tableofcontents
+\end{frame}
+\section{Motivación}
+\begin{frame}
+	\frametitle{Motivación}
 	\begin{itemize}
 		\item Sea $M$ una variedad Riemanniana \em{conexa, homogénea, de curvatura negativa}, entonces $M$ es \em{simplemente conexa} por un resultado de Kobayashi.
 		\item Heintze prueba la isometría $M \cong N \rtimes_{\alpha} \mathbb{R}^{+}$, donde $N$ es un grupo de Lie simplemente conexo, nilpotente con álgebra de Lie $\mathfrak{n}$ tal que a nivel de álgebras, el $1 \in \mathfrak{n}$ actúa por medio de una derivación $\alpha: \mathfrak{n} \to \mathfrak{n}$ con valores propios positivos.
@@ -21,7 +37,7 @@
 	\end{itemize}
 \end{frame}
 \begin{frame}
-	\frametitle{Preliminares (cont.)}
+	\frametitle{Motivación (cont.)}
 	\begin{itemize}
 		\item Si $N$ es abeliano, se puede demostrar que el mapeo exponencial $Exp: \mathfrak{n} \rtimes_{\alpha} \mathbb{R} \to N \rtimes_{\alpha} \mathbb{R}^{+}$ es un difeomorismo.
 		\item $Exp$ se convierte en un isomorfismos de grupos de Lie definiendo el siguiente producto en $\mathfrak{n} \rtimes_{\alpha} \mathbb{R}$:
@@ -106,7 +122,6 @@
 		      $$
 	\end{itemize}
 \end{frame}
-\section{La geometría de los grupos de Heintze}
 \begin{frame}
 	{Grupos abelianos diagonales}
 	Recordemos que una matriz $A \in \mathbb{R}^{n\times n}$ es normal si cumple que $A^T A = A A^T$ y que $A$ es $\mathbb{C}$-diagonalizable por matrices \alert{unitarias} si y solo si es normal.
@@ -117,6 +132,7 @@
 	\end{block}
 
 \end{frame}
+\section{Grupos abelianos diagonales}
 \begin{frame}
 	{Conexión para grupos diagonales}
 	\begin{block}
@@ -150,6 +166,7 @@
 		\item Sean $D$ y $S$ las partes simétrica y anti-simétrica de una matriz general $A$, se puede verificar que la curvatura es negativa si y solo sí $D$ y $D^2 -SD -DS $ son positivas definidas.
 	\end{itemize}
 \end{frame}
+\subsection{Geometría de grupos de Heintze}
 \begin{frame}
 	{Ecuaciones geodésicas}
 	\begin{itemize}
@@ -162,13 +179,30 @@
 	{Ecuaciones geodésicas}
 	Sea $\xi = (\tilde{\xi}, \xi_{n+1}) \in T_{0}(\mathbb{R}^n \rtimes_{A} \mathbb{R})$ unitario, con $A$ diagonal. Sea $\gamma(t) = \exp_{0}(t\xi)$ la geodésica que parte del origen con velocidad $\xi$. Entonces $\gamma = (\tilde{\gamma}, \gamma_{n+1})$ es la única solución del ODE siguiente,
 	\begin{align}
-		\tilde{\gamma}' = e^{2A\gamma_{n+1}} \tilde{\xi}, &  &
-		\gamma''_{n+1} = - \tilde{\xi}^{t} A e^{2A\gamma_{n+1}} \tilde{\xi}, \label{eq:geodesica}
+		\tilde{\gamma}' &= e^{2A\gamma_{n+1}} \tilde{\xi}, \nonumber \\
+		\gamma''_{n+1} &= - \tilde{\xi}^{t} A e^{2A\gamma_{n+1}} \tilde{\xi}, \label{eq:geodesica}
 	\end{align}
 	con condiciones iniciales $\gamma(0) = \xi$. Además, la velocidad de la geodésica satisface la siguiente ecuación
 	$$
 		\tilde{\xi}^t e^{2A\gamma_{n+1}}\tilde{\xi} + {\gamma'}^2_{n+1} = 1.
 	$$
+\end{frame}
+\begin{frame}
+	{Geometría en $\mathbb{R}^2\rtimes_{diag(1, 0.5)} \mathbb{R}$}
+	\begin{minipage}
+		[t]{0.4\linewidth}
+		\includegraphics[width=\linewidth]{log-model} \\
+		\includegraphics[width=\linewidth]{geodesic} 
+	\end{minipage} \hfil
+	\begin{minipage}
+		[t]{0.4\linewidth}
+		\includegraphics[width=\linewidth]{half-plane}	
+		\begin{itemize}
+			\item \underline{\href{https://www.kaggle.com/code/renegarxia/geodesic-sphere-heintze-group}{Cuaderno de trabajo}}
+			\item \underline{\href{https://colab.research.google.com/drive/1V3Q33ysTzH1UYRi2ezewIQ3hhsjbHH49?usp=sharing}{Versión interactiva}}
+			\item \underline{\href{https://www.geogebra.org/m/gzftxhfe}{Disco hiperbólico}}
+		\end{itemize}
+	\end{minipage}
 \end{frame}
 \begin{frame}
 	\begin{block}
@@ -204,6 +238,7 @@
 		En este marco, $\tilde{v} = e^{A\gamma_{n+1}}\tilde{\xi}$. El estimado en $\gamma_{n+1}$ prueba que $\int_{0}^{\infty} |A\tilde{v}(s)| ds < \infty$ y que $\tilde{v}$ es uniformemente acotada. Viendo el lado derecho de~\eqref{eq:parallel-transport} como el residuo de la ecuación trivial $\omega' = 0$, el resultado se sigue de la teoría de estabilidad de Levinson.
 	\end{proof}
 \end{frame}
+\subsection{Volumen de bolas geodésicas}
 \begin{frame}[shrink=20]
 	{El volumen de bolas geodésicas}
 	Sean $V(r)$ el volumen de la bola $\mathbb{B}_{0}(r)$ y $S(r)$ el área de $\partial\mathbb{B}_{0}(r)$. Queremos estimar
@@ -258,6 +293,30 @@
 		$$
 		donde $D$ es la parte simétrica de $A$ y $S^{n}$ es la $n$-esfera canónica.
 	\end{block}
+\end{frame}
+\section{Comentarios}
+\begin{frame}
+	{Comentarios}
+	\begin{itemize}
+		\item En general la curvatura de $\mathbb{R}^{n}\rtimes_{A}\mathbb{R}$ depende de la parte simétrica y antisimétrica de $A$.
+		\item Si $A$ no es diagonalizable ya no es posible utilizar el criterio de estabilidad para estimar el volumen.
+		\item Problema abierto: Si $[\mathfrak{g}, \mathfrak{g}]$ no es abeliano, ¿cuáles son las ecuaciones geodésicas y de transporte paralelo?
+		\begin{itemize}
+		\item Por ejemplo, $H_{2n+1} \rtimes_{A} \mathbb{R}$, donde $H_{2n+1}$ es el grupo de Heisenberg.	
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Referencias}
+	\bibliographystyle{alpha}
+	\begin{thebibliography}{99}	
+		\bibitem{horocyclic} Woess, W., 2013. What is a horocyclic product, and how is it related to lamplighters? Internationale Mathematische Nachrichten 67, 1–27. \url{https://www.oemg.ac.at/db/IMN/224}
+		
+		\bibitem{heintze} Heintze, E., 1974. On homogeneous manifolds of negative curvature. Math. Ann. 211, 23–34. \url{https://doi.org/10.1007/BF01344139}
+		
+		\bibitem{preprint} IGL, Volume Entropy Of A Family Of Rank One, Split-Solvable Lie Groups Of Abelian Type. Preprint disponible en \url{https://arxiv.org/abs/2410.10631}
+		
+	\end{thebibliography}
 \end{frame}
 \end{document}
 
